@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "1fd26170-ada1-4dcc-b030-8957d21f999d",
+		"name": "express-js-starter-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get HTML document",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/html-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"html-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a static file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/static/css/main.css",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"static",
+						"css",
+						"main.css"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get JSON document",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/json-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"json-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Middleware experiment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/middleware-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"middleware-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple POST example",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "enctype",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "your_name",
+							"value": "Foo Barstein",
+							"type": "text"
+						},
+						{
+							"key": "your_email",
+							"value": "fb1258@nyu.edu",
+							"type": "text"
+						},
+						{
+							"key": "agree",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/post-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload one file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "enctype",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "my_files",
+							"type": "file",
+							"src": "/Users/amos/Desktop/software_design/exports/animal-default.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload three files",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "enctype",
+						"type": "text",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "my_files",
+							"type": "file",
+							"src": [
+								"/Users/amos/Desktop/software_design/exports/animal-confirmation.png",
+								"/Users/amos/Desktop/software_design/exports/animal-default.png",
+								"/Users/amos/Desktop/software_design/exports/animal-message-sent.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API proxy request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/proxy-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proxy-example"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API proxy request using environmental variables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dotenv-example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dotenv-example"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
