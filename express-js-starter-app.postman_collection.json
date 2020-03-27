@@ -17,7 +17,8 @@
 						"localhost"
 					],
 					"port": "3000"
-				}
+				},
+				"description": "The server's root route returns the plain text, 'Hello!'"
 			},
 			"response": []
 		},
@@ -36,7 +37,8 @@
 					"path": [
 						"html-example"
 					]
-				}
+				},
+				"description": "The server's /html-example route returns an HTML document from a static file."
 			},
 			"response": []
 		},
@@ -57,7 +59,8 @@
 						"css",
 						"main.css"
 					]
-				}
+				},
+				"description": "All files stored in the server's public/ directory are accessible under the /static route"
 			},
 			"response": []
 		},
@@ -76,7 +79,8 @@
 					"path": [
 						"json-example"
 					]
-				}
+				},
+				"description": "The server's /json-example route returns a simple JSON object.  Presumably a web browser's Javascript code would receive this JSON and use it to update the web page in some way."
 			},
 			"response": []
 		},
@@ -95,7 +99,8 @@
 					"path": [
 						"middleware-example"
 					]
-				}
+				},
+				"description": "The server has two middleware functions set up to show how middleware works.  If the server responds with a message that it has run the middleware functions, we prove that the middleware functions are working."
 			},
 			"response": []
 		},
@@ -117,8 +122,8 @@
 					}
 				],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
+					"mode": "urlencoded",
+					"urlencoded": [
 						{
 							"key": "your_name",
 							"value": "Foo Barstein",
@@ -146,7 +151,8 @@
 					"path": [
 						"post-example"
 					]
-				}
+				},
+				"description": "Check out the data that is being passed to the server by clicking the 'Body' tab below.  This data is sent to the server via HTTP POST."
 			},
 			"response": []
 		},
@@ -181,7 +187,8 @@
 					"path": [
 						"upload-example"
 					]
-				}
+				},
+				"description": "Here we use HTTP POST to upload a single file to the server.  Click the 'Body' tab below and select a file to upload.  The server's multer module saves that file for us."
 			},
 			"response": []
 		},
@@ -220,7 +227,8 @@
 					"path": [
 						"upload-example"
 					]
-				}
+				},
+				"description": "Here we use HTTP POST to upload three files to the server.  Click the 'Body' tab below and select the file to upload.  The server's multer module saves those files for us."
 			},
 			"response": []
 		},
@@ -239,7 +247,8 @@
 					"path": [
 						"proxy-example"
 					]
-				}
+				},
+				"description": "Here, the /proxy-example route triggers express to make a call to an API for a bunch of data about animals.  This data is then returned to us here as an array of JSON objects.  This is a very common format for receiving data from a server or API."
 			},
 			"response": []
 		},
@@ -258,7 +267,29 @@
 					"path": [
 						"dotenv-example"
 					]
-				}
+				},
+				"description": "Here, the /dotenv-example route triggers express to make a call to an API for a bunch of data about animals.  This data is then returned to us here as an array of JSON objects.  This is a very common format for receiving data from a server or API.  The difference between this example and the 'API proxy request' example, is that the server code in this route uses the dotenv module to keep the API login credentials secret and not hard-coded or stored in version control."
+			},
+			"response": []
+		},
+		{
+			"name": "Parameter example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/parameter-example/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"parameter-example",
+						"22"
+					]
+				},
+				"description": "Here we pass a parameter to a route.  The number 22 is a parameter - you can change it.  Imagine this number is the unique ID of some data in a database or from an API that we want the server to send to us.  This is a common way of requesting specific data from a server."
 			},
 			"response": []
 		}

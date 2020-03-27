@@ -138,5 +138,26 @@ app.get('/dotenv-example', (req, res, next) => {
     .catch(err => next(err)); // pass any errors to express
 });
 
+// a route with parameter ... animalId is a parameter
+// the code here is similar to the dotenv-example route above... but...
+// using async/await in this route to show another way of dealing with asynchronous requests to an external API or database
+app.get('/parameter-example/:animalId', async (req, res) => {
+    // use axios to make a request to an API to fetch a single animal's data
+    // we use a Mock API here, but imagine we passed the animalId to a real API and received back data about that animal
+    const apiResponse = await axios.get(`${process.env.API_BASE_URL}?key=${process.env.API_SECRET_KEY}&num=1&id=${req.params.animalId}`)
+    .catch(err => next(err)); // pass any errors to express
+
+    // express places parameters into the req.params object
+    const responseData = {
+        status: 'wonderful',
+        message: `Imagine we got the data from the API for animal #${req.params.animalId}`,
+        animalId: req.params.animalId,
+        animal: apiResponse.data
+    }
+
+    // send the data in the response
+    res.json(responseData)
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app; // CommonJS export style!
