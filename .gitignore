@@ -1,3 +1,6 @@
+# any uploaded files
+public/uploads
+
 # Compiled source #
 ###################
 *.com
