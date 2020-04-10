@@ -1,9 +1,11 @@
 # Express.js Starter App
 
 ## Concept
+
 This project shows some basic usage of Express.js features, including:
+
 - handling incoming HTTP requests using express routes
-- exploring the purpose of middleware and how it works 
+- exploring the purpose of middleware and how it works
 - debugging express apps using [morgan](https://github.com/expressjs/morgan) and [Postman](https://www.postman.com/)
 - handling data included in HTTP POST requests
 - handling file uploads using [multer](https://github.com/expressjs/multer)
@@ -15,7 +17,9 @@ This project shows some basic usage of Express.js features, including:
 Many of the features of Express exhibited in this project are explained at a high level in this [prepared lecture presentation](https://nyu-computer-science.github.io/software-engineering/express/).
 
 ## Intentional exclusions
+
 There are some common practices that we have not included here, since we believe they are distraction's from a beginner's ability to master React's code patterns.
+
 - inclusion of any front-end code
 - inclusion of user account registration or log in functionality
 - inclusion of unit testing modules, like mocha and chaai
@@ -33,4 +37,3 @@ This is necessary before running the app, since the 3rd-party dependency code is
 ### `nodemon server`
 
 Start up the web server application using `nodemon`, which will stop and restart the app anytime there is a code change.
-
