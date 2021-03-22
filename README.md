@@ -23,7 +23,7 @@ There are some common practices that we have not included here, since we believe
 - inclusion of any front-end code
 - inclusion of user account registration or log in functionality
 - inclusion of unit testing modules, like mocha and chaai
-- use of express-router
+- inclusion of any database
 
 ## Available Scripts
 
