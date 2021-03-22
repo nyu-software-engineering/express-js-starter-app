@@ -24,6 +24,7 @@ There are some common practices that we have not included here, since we believe
 - inclusion of user account registration or log in functionality
 - inclusion of unit testing modules, like mocha and chaai
 - inclusion of any database
+- use of [express-router](https://www.npmjs.com/package/express-router) for better-organizing routes
 
 ## Available Scripts
 
