@@ -29,11 +29,36 @@ There are some common practices that we have not included here, since we believe
 
 In the project directory, you can run:
 
-### `npm install`
+### `npm install` - install dependencies
 
 Installs all the dependencies listed in the `package.json` configuration file.
 This is necessary before running the app, since the 3rd-party dependency code is excluded from version control by the `.gitignore` git settings file.
 
-### `nodemon server`
+### `nodemon server` - start the server locally
 
-Start up the web server application using `nodemon`, which will stop and restart the app anytime there is a code change.
+Start up the web server application using `nodemon`, which will stop and restart the app anytime there is a code change. The server will be available on port `3000` of the local computer at the URL, `http://localhost:3000`.
+
+## Server API End-Points
+
+This server code sets up routes for several API end-points - URLs to which a client can make requests. Except where indicated, the server accepts `GET` requests to these routes.
+
+The example routes include:
+
+- `/` - a route for the "root" document - usually the home page, but in this case a simple text response.
+- `/html-example` - a route that shows how to return a simple HTML document.
+- `/static/css/main.css` - a route that servers as an example of servnig a static file that does not need dynamic server logic.
+- `/json-example` - a route that shows how the server can respond with a JSON document.
+- `/middleware-example` - a route that exhibits the concept of middleware.
+- `/post-example` - a route that accepts `POST` requests with some content the server expects the client to send in the body of the request.
+- `/upload-example` - a route that accepts a `POST` request with one or more files in the request that the client uploads to the server.
+- `/proxy-example` - a route that causes the server to make a request to a different API and then respond to the client with the data received from that API.
+- `/dotenv-example` - a route that shows how a server can use the `dotenv` module to load environmental variables from a file named `.env` into Javascript code.
+- `/parameter-example/22` - a route that shows an example of how parts of the route URL - in this case the number `22` - can be parameterized and accessed in code.
+
+### Running the server
+
+### Testing the routes
+
+It is possible to try out the routes directly in a web browser. However, it is often more convenient to use an API-testing tool like [Postman](https://www.postman.com/) to test out the server API end-points.
+
+- Import the test file named `express-js-starter-app.postman_collection.json` into Postman to test out the API end-points.
