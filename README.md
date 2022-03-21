@@ -18,26 +18,26 @@ Many of the features of Express exhibited in this project are explained at a hig
 
 ## Intentional exclusions
 
-There are some common practices that we have not included here, since we believe they are distraction's from a beginner's ability to master React's code patterns.
+There are some common practices that we have not included here, since we believe they are distraction's from a beginner's ability to master Express.js' code patterns.
 
-- inclusion of any front-end code
-- inclusion of user account registration or log in functionality
-- inclusion of unit testing modules, like mocha and chaai
-- inclusion of any database
-- use of [express-router](https://www.npmjs.com/package/express-router) for better-organizing routes
+- exclusion of any front-end code
+- exclusion of user account registration or log in functionality
+- exclusion of unit testing modules, like mocha and chai
+- exclusion of any database
+- exclusion of [express-router](https://www.npmjs.com/package/express-router), which would allow us to better organize large collections of routes
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm install` - install dependencies
+- `npm install` - installs all the dependencies listed in the `package.json` configuration file.
+  This is necessary before running the app, since the 3rd-party dependency code is excluded from version control by the `.gitignore` git settings file.
 
-Installs all the dependencies listed in the `package.json` configuration file.
-This is necessary before running the app, since the 3rd-party dependency code is excluded from version control by the `.gitignore` git settings file.
+- `npm start` - starts the server the old-fashioned way. When started in this way, the server has to be manually restarted whenever you change the code.
 
-### `nodemon server` - start the server locally
+- `nodemon server` - starts up the server with a monitoring process that will stop and restart the server automatically anytime there is a code change. If you haven't yet done so, install `nodemon` globally with `npm install -g nodemon`.
 
-Start up the web server application using `nodemon`, which will stop and restart the app anytime there is a code change. The server will be available on port `3000` of the local computer at the URL, `http://localhost:3000`.
+Once started, the server will by default be available on port `3000` of the local computer at the URL, `http://localhost:3000`.
 
 ## Server API End-Points
 
