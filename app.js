@@ -80,7 +80,7 @@ app.post("/post-example", (req, res) => {
   // now do something amazing with the data we received from the client
   const data = {
     status: "amazing success!",
-    message: "congratulations on send us this data!",
+    message: "congratulations on sending us this data!",
     your_data: {
       name: req.body.your_name,
       email: req.body.your_email,
@@ -111,11 +111,20 @@ const upload = multer({ storage: storage })
 // route for HTTP POST requests for /upload-example
 app.post("/upload-example", upload.array("my_files", 3), (req, res, next) => {
   // check whether anything was uploaded
-  if (!req.files) {
+  if (!req.files || req.files.length == 0) {
     // failure!
     const error = new Error("Please upload some files!")
     error.httpStatusCode = 400
-    return next(error)
+    res.json({
+      status: "you fail!!!",
+      message: "rejected your files... try harder",
+    })
+    // return next(error)
+  } else if (req.files.length > 3) {
+    res.json({
+      status: "you fail!!!",
+      message: "rejected your files... try harder",
+    })
   } else {
     // success
     // send a message back to the client, for example, a simple JSON object
