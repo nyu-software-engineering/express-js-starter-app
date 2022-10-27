@@ -1,5 +1,6 @@
 # any uploaded files
-public/uploads
+public/uploads/*
+!public/uploads/readme.txt
 
 # Compiled source #
 ###################
