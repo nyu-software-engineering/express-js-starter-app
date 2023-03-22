@@ -50,7 +50,7 @@ app.get("/json-example", (req, res) => {
 })
 
 // custom middleware - first
-app.use((req, res, next) => {
+app.use("/middleware-example", (req, res, next) => {
   // make a modification to either the req or res objects
   res.addedStuff = "First middleware function run!"
   // run the next middleware function, if any
@@ -58,7 +58,7 @@ app.use((req, res, next) => {
 })
 
 // custom middleware - second
-app.use((req, res, next) => {
+app.use("/middleware-example", (req, res, next) => {
   // make a modification to either the req or res objects
   res.addedStuff += " Second middleware function run!"
   // run the next middleware function, if any
