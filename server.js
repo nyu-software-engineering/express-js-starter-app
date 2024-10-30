@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // import the express app
-const server = require("./app")
+const server = require('./app')
 
 // which port to listen for HTTP(S) requests
 const port = 3000
