@@ -1,13 +1,18 @@
 // import and instantiate express
-const express = require('express') // CommonJS import style!
+import express from 'express' // ES module import style
 const app = express() // instantiate an Express object
-const path = require('path')
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // import some useful middleware
-const multer = require('multer') // middleware to handle HTTP POST requests with file uploads
-const axios = require('axios') // middleware for making requests to APIs
-require('dotenv').config({ silent: true }) // load environmental variables from a hidden file named .env
-const morgan = require('morgan') // middleware for nice logging of incoming HTTP requests
+import multer from 'multer' // middleware to handle HTTP POST requests with file uploads
+import axios from 'axios' // middleware for making requests to APIs
+import dotenv from 'dotenv' // load environmental variables from a hidden file named .env
+dotenv.config({ silent: true })
+import morgan from 'morgan' // middleware for nice logging of incoming HTTP requests
 
 /**
  * Typically, all middlewares would be included before routes
@@ -190,4 +195,4 @@ app.get('/parameter-example/:animalId', async (req, res) => {
 })
 
 // export the express app we created to make it available to other modules
-module.exports = app // CommonJS export style!
+export default app // ES module export style!

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // import the express app
-const server = require('./app')
+import server from './app.js'
 
 // which port to listen for HTTP(S) requests
 const port = 3000
@@ -17,6 +17,4 @@ const close = () => {
 }
 
 // export the close function
-module.exports = {
-  close: close,
-}
+export { close }
