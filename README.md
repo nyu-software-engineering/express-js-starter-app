@@ -35,13 +35,13 @@ In the project directory, you can run:
 
 - `npm start` - starts the server the old-fashioned way. When started in this way, the server has to be manually restarted whenever you change the code.
 
-- `npm test` - runs the unit tests in the `test` directory using `mocha`.
+- `npm test` - runs the unit tests in the `test` directory using `mocha`. If you haven't yet done so, install `mocha` globally with `npm install -g mocha`.
 
 - `npm run coverage` - runs the unit tests and generates a code coverage report using `c8`.
 
-- `npm run dev` - starts the server with `nodemon`, a monitoring service which will automatically stop and restart the server every time a code file is modified and saved.
-
 - `nodemon server` - starts up the server with a monitoring process that will stop and restart the server automatically anytime there is a code change. If you haven't yet done so, install `nodemon` globally with `npm install -g nodemon`.
+
+- `npm run dev` - an npm script to start the server with `nodemon`.
 
 Once started, the server will by default be available on port `3000` of the local computer at the URL, `http://localhost:3000`.
 
