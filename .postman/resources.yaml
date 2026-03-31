@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: ""
+
+localResources:
+  collections:
+    - ../express-js-starter-app.postman_collection.json
